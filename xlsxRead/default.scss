@@ -1,0 +1,48 @@
+.test-wrap {
+    display: block;
+    width: 800px;
+
+    .input-box {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 10px 20px;
+        border: 1px solid #ddd;
+
+        em {
+            font-style: normal;
+        }
+    }
+
+    .list-box {
+        margin-top: 20px;
+
+        table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+            border-spacing: 0;
+
+            th,
+            td {
+                padding: 6px;
+            }
+
+            th {
+                font-weight: normal;
+                color: #fff;
+                background-color: #666;
+            }
+
+            td {
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    }
+}
+
+/* ETC */
+
+.text-align-left {
+    text-align: left;
+}

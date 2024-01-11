@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setter</title>
+    <script type="text/javascript">
+
+        var expr = "foo";
+
+        var obj = {
+            baz: "bar",
+            set [expr](v) {
+                this.baz = v;
+            }
+        };
+/*
+        console.log(obj.baz); // "bar"
+        obj.foo = "baz";      // run the setter
+        console.log(obj.baz); // "baz"
+
+*/
+
+        var o = { a:0 };
+
+        Object.defineProperty(o, "b", { set: function (x) { this.a = x / 2; } });
+
+        o.b = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
+        // console.log(o.a) // 5
+
+
+
+        let user = {
+            name: "John",
+            surname: "Smith",
+
+            get fullName() {
+                return `${this.name} ${this.surname}`;
+            },
+            set firstName(value) {
+                [this.name] = value.split(" ");
+            },
+            set lastName(value) {
+                [this.surname]  = value.split("");
+            },
+            set fullName(value) {
+                [this.name, this.surname] = value.split(" ");
+            }
+        };
+
+        console.log(`기존 이름 : `+ user.fullName); // John Smith
+
+        user.fullName = "Alice Cooper";
+
+        console.log(`수정 이름1 : ` + user.name); // Alice
+        console.log(`수정 이름1 : ` + user.surname); // Cooper
+
+        user.firstName = "Kim";
+
+        console.log(`수정 이름 전체 : ` + user.fullName);
+
+
+
+        var o = {}; // 새로운 객체 생성
+
+        // 데이터 속성 서술자와 defineProperty로
+        // 새로운 속성을 추가하는 예시
+        Object.defineProperty(o, 'a', {
+            value: 37,
+            writable: true,
+            enumerable: true,
+            configurable: true
+        });
+        // 'a' 속성이 o 객체에 존재하고 값은 37
+
+        // 접근자 속성 기술자와 defineProperty로
+        // 새로운 속성을 추가하는 예시
+        var bValue = 38;
+        Object.defineProperty(o, 'b', {
+            // ES2015 단축 메서드명 사용
+            // 아래 코드와 같음
+            // get: function() { return bValue; }
+            // set: function(newValue) { bValue = newValue; },
+            get() { return bValue; },
+            set(newValue) { bValue = newValue; },
+            enumerable: true,
+            configurable: true
+        });
+        console.log(o.a);
+        console.log(o.b);
+        console.log(o);
+        // 'b' 속성이 o 객체에 존재하고 값은 38
+        // o.b를 재정의하지 않는 이상
+        // o.b의 값은 항상 bValue와 동일함
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

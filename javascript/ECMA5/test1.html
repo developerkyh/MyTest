@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            //alert(5 + 3 * 2); 결과 11
+            //alert((5 + 3) * 2); 결과 16
+            //alert(50 > 100); 결과 false
+            //alert(true>false); 결과 true
+            /* if(100<50){
+                alert('백이 오십보다 작을일 없지?');
+            }else{
+                alert("백이 오십보다 당연 크지!!");
+            }*/
+            //alert(!true); 결과 false; 결과 논리부정연산 false
+            //alert(30 > 20 > 10); 결과 false
+            //alert(30 >20 && 20 >10); 결과 true
+            /*
+            var number=10;
+            alert(number++);
+            alert(number++);
+            alert(number++);
+             */
+            //alert(typeof('String')); 문자열
+            //alert(typeof(2324)); 숫자
+            //alert(typeof(true)); 불리언
+            //alert(typeof(function(){})); 함수
+            //alert(typeof({})); 객체
+            //alert(typeof(alpha)); undefined
+            /*var input = prompt('메세지','DefStr');
+            alert(input);*/
+            /*var input = confirm('수락?');
+            alert(input);*/
+//            alert(typeof(variable)); undefined
+            /*var input = prompt('숫자 입력','숫자');
+            alert(typeof(input));*/
+            /*var input = prompt('숫자를','숫자');
+            var numberInput = Number(input);
+            alert(typeof(numberInput)+':' + numberInput);*/
+            /*alert('0:' + Boolean(0));
+            alert('NaN:' + Boolean(NaN));
+            alert('\' \':' + Boolean(''));
+            alert('null :' + Boolean(null));
+            alert('undefined: ' + Boolean(undefined));*/
+
+            /*alert(Boolean(0));
+            alert(!NaN);
+            alert(!!'');
+            alert(!!null);
+            alert(!!undefined);*/
+
+            /*alert('' == false);
+            alert('' == 0);
+            alert(0 == false);
+            alert(typeof(undefined);*/
+
+/*
+            var date = new Date();
+            var hour = date.getHours();
+            if(hour < 12){
+                alert('오전');
+            }
+            else if(hour >= 12){
+                alert('오후');
+            }
+*/
+/*            var userInput = prompt('숫자 입력','숫자');
+            if(0 < userInput){
+                alert('양수입니다.');
+            }else if(0 == userInput){
+                alert('입력한 값은 0 입니다.');
+            }else if(0 > userInput){
+                alert('음수입니다.');
+            }*/
+/*            var userInput = prompt('숫자 입력','숫자');
+            var jjacksu = userInput % 2;
+            if(jjacksu == 0){
+                    alert('짝수입니다.')
+            }else{
+                    alert('홀수입니다.')
+            }*/
+
+/*            var kor = prompt('국어점수 입력','숫자');
+            var eng = prompt('영어점수 입력','숫자');
+            var math = prompt('수학점수 입력','숫자');
+
+            var average = 0;
+
+            average += Number(kor);
+            average += Number(eng);
+            average += Number(math);
+
+            var mean = average / 3;
+
+            switch(true){
+                case mean < 100 && mean >= 90:
+                    alert("'우수' 입니다.");
+                    break;
+                case mean < 90 && mean >= 80:
+                    alert("'수' 입니다.");
+                    break;
+                case mean < 80 && mean >= 70:
+                    alert("'우' 입니다.");
+                    break;
+                case mean < 70 && mean >= 60:
+                    alert("'미' 입니다.");
+                    break;
+                case mean < 60 && mean >= 50:
+                    alert("'양' 입니다.");
+                    break;
+                default:
+                    alert("'가' 입니다.");
+                    break;
+            }*/
+/*            true || alert('논리합 참일때 실행');
+            false || alert('논리합 거짓일때 실행');*/
+/*            var startTime = new Date().getTime();
+
+            for(var CPS = 0; new Date().getTime() < startTime + 1000; CPS++){}
+            alert('초 당 연산 횟수:' + CPS);*/
+/*            var array = ['포도','사과','딸기','키위'];
+            for(var i in array){
+                alert(array[i]);
+            }*/
+/*            var out = '';
+            for(var i=0; i <10; i++){
+                for(var j=0; j < i; j++) {
+                    out += '*';
+                }
+                out += '\n';
+            }
+            alert(out);*/
+/*            aaa();
+            function aaa(){ alert('함수A');}
+            function aaa(){ alert('함수B');}*/
+            /*function f(x){ return x * x; }
+            alert(f(4));*/
+            /*var array1 = Array();
+            var array2 = Array(10);
+            var array3 = Array(273, 103, 57, 32);
+
+            alert(array1 + '\n' + array2 + '\n' + array3 + '\n');*/
+            /*function sumAll(){
+                var output = 0;
+                for(var i = 0; i < arguments.length; i++ ){
+                    output += arguments[i];
+                }
+                return alert(output);
+            }
+            sumAll(1,2,3);*/
+/*
+            function returnTest(){
+                alert('문장 A');
+                return;
+                alert('문장 B');
+            }
+            returnTest();
+*/
+/*
+    function square(x){return x * x;}
+    function pythagoras(width, height){
+        return Math.sqrt(square(width) + square(height));
+    }
+    alert(pythagoras(3,4));
+
+    function square(width, height, hypotenuse) {
+        if (width * width + height * height == hypotenuse * hypotenuse) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+*/
+
+/*
+     function callFunctionTenTimes(otherFunction){
+         for(var i=0; i < 5; i++){
+             otherFunction();
+         }
+     }
+     callFunctionTenTimes(function(){
+            alert('Helo World....!');
+     });
+*/
+/*
+
+    function callFunctionTenTimes(otherFunction){
+        for(var i=0; i <5 ; i++){
+            otherFunction();
+        }
+    }
+    function justFunction(){
+        alert('Helo World....!');
+    }
+    callFunctionTenTimes(justFunction);
+
+*/
+/*
+    function outerFunction(){
+        return function(){
+            alert('Hello World...!');
+        };
+    }
+    outerFunction()();
+*/
+
+/*
+
+    function outerFunction(name){
+        var output = 'Hello ' + name +'..!'
+        return function(){
+            return output;
+        };
+    }
+
+        var first = outerFunction('javascript');
+        var second = outerFunction('jQuery')
+
+        alert(first());
+        alert(second());
+*/
+
+/*
+        var URI = 'http://www.naver.com?test=한글입니다';
+
+        var output = '';
+        output += '★escape()\n'
+        output += escape(URI) + '\n\n';
+
+        alert(output);
+*/
+/*
+        willEval += 'var number = 10;';
+            willEval += 'alert(number);';
+        eval(willEval);
+
+            alert('eval로 변수 정의가능:'+ number);
+            var willEval='';
+*/
+/*
+        var number1 = 10 / 0;
+        var number2 = 10 / 'A';
+        alert(isFinite(number1) + ':' + isNaN(number2));
+*/
+
+/*
+        var value = -10/0;
+
+        if(value == Infinity){
+            alert('value is Infinity');
+        }else{
+            alert('value is not Infinty');
+        }
+*/
+/*
+        if(isNaN(NaN) == isNaN(NaN)){
+            alert('NaN == NaN');
+        }else{
+            alert('NaN != NaN');
+        }
+*/
+/*
+        var won = '1000원';
+        var dollar = '1.5$';
+        alert(parseInt(won)+':'+parseInt(dollar));
+        alert(parseFloat(won)+':'+parseFloat(dollar));
+*/
+/* var array = [];
+ for(var i=0; i<10; i++){
+	 array.push(i*i);
+	 }
+	 array.forEach(function(item, index){
+	 	console.log(item);
+	 });
+*/
+        </script>
+</head>
+    <body>
+        <div><p>javascript test 1장에서 5장까지~</p></div>
+    </body>
+</html>

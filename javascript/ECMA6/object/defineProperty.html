@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>defineProperty</title>
+    <script type="text/javascript">
+        const obj1 = {};
+
+        Object.defineProperty(obj1, 'prop1', {
+            value: 42,
+            writable: true
+        });
+
+        obj1.prop1 = 77;
+
+        console.log(obj1.prop1);
+
+        var o = {}; // 새로운 객체 생성
+
+        // 데이터 속성 서술자와 defineProperty로
+        // 새로운 속성을 추가하는 예시
+        Object.defineProperty(o, 'a', {
+            value: 37,
+            writable: true,
+            enumerable: true,
+            configurable: true
+        });
+        // 'a' 속성이 o 객체에 존재하고 값은 37
+
+        // 접근자 속성 기술자와 defineProperty로
+        // 새로운 속성을 추가하는 예시
+        var bValue = 122;
+        Object.defineProperty(o, 'b', {
+            // ES2015 단축 메서드명 사용
+            // 아래 코드와 같음
+            // get: function() { return bValue; }
+            // set: function(newValue) { bValue = newValue; },
+            get() { return bValue; },
+            set(newValue) { bValue = newValue; },
+            enumerable: true,
+            configurable: true
+        });
+        console.log(o.a); // 122
+        console.log(o.b); // 122
+        // 'b' 속성이 o 객체에 존재하고 값은 38
+        // o.b를 재정의하지 않는 이상
+        // o.b의 값은 항상 bValue와 동일함
+
+        // 두 가지를 혼용할 수 없음
+        /*
+        Object.defineProperty(o, 'conflict', {
+            value: 0x9f91102,
+            get: function() { return 0xdeadbeef; }
+        });
+        */
+        // TypeError 발생
+        // value는 데이터 서술자에만,
+        // get은 접근자 서술자에만 나타날 수 있음
+
+    </script>
+</head>
+<body>
+</body>
+</html>

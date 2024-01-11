@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>arrowFunction</title>
+    <script type="text/javascript">
+        const materials = [
+            'Hydrogen',
+            'Helium',
+            'Lithium',
+            'Beryllium'
+        ];
+
+        // console.log(materials.map(material => material));
+
+        /*
+        materials.map(function(materials) {
+            return materials.length;
+        });
+
+        console.log(materials.map(material => material.length));
+        */
+
+
+        function Person() {
+            // Person() 생성자는 `this`를 자신의 인스턴스로 정의.
+            this.arrowAge = 0;
+            this.arrowDge = 2;
+
+            setInterval(function growUp() {
+                // 비엄격 모드에서, growUp() 함수는 `this`를
+                // 전역 객체로 정의하고, 이는 Person() 생성자에
+                // 정의된 `this`와 다름.
+                this.arrowAge = 10;
+            }, 1000);
+
+            setInterval(() => {
+                this.arrowDge++;
+            }, 1000);
+        }
+
+        var p = new Person();
+
+        console.log("일반 함수:" + p.arrowAge + "화살표 함수" + p.arrowDge);
+
+    </script>
+</head>
+
+</html>

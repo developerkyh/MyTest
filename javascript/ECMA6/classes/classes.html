@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>classes</title>
+    <script type="text/javascript">
+
+        class Polygon {
+            constructor(name, height, width) {
+                this.user = name;
+                this.height = height;
+                this.width = width;
+            }
+            sayName() {
+                return 'My name is '+ this.user + '.';
+            }
+        }
+
+        class Square extends Polygon {
+            constructor(name, height, width) {
+                super(name, height, width);
+            }
+            get area() {
+                return this.height * this.width
+            }
+            get userName() {
+                return this.user;
+            }
+
+            testEnd () {
+                return super.sayName();
+           }
+        }
+
+        let test = new Square('Hyeonju Kim ',20, 60);
+
+        console.log(test.userName);
+        console.log(test.area);
+        console.log(test.testEnd());
+
+        class Human {
+            constructor(foot, hand, name) {
+                this.foot = foot;
+                this.hand = hand;
+                this.name = name;
+            }
+            static hands () {
+                return 'hands';
+            }
+        }
+
+        class Person extends Human {
+            constructor(aaa, bbb, ccc) {
+                super(aaa, bbb, ccc);
+            }
+            footD() {
+                return this.foot;
+            }
+            handD() {
+                let name = '김현지 ';
+                return name + this.hand;
+            }
+            nameD() {
+                return this.name;
+            }
+            static handsPlus() {
+                return super.hands();
+            }
+        }
+
+        let test2 = new Person("머리", "손꾸락", "원지연");
+
+         console.log(test2.footD());
+         console.log(test2.handD());
+         console.log(test2.nameD());
+         console.log(Person.handsPlus());
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

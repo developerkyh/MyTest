@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>defineProperty</title>
+
+    <script type="text/javascript">
+
+        let o, d;
+
+        o = {get foo() {return 17;}};
+        d = Object.getOwnPropertyDescriptor(o, 'foo');
+
+        o = {bar: 42};
+        d = Object.getOwnPropertyDescriptor(o, 'bar');
+
+        o = {};
+
+        Object.defineProperty(o, 'baz', {value: 8623456, writable: false, enumerable: false});
+        d = Object.getOwnPropertyDescriptor(o, 'baz');
+        d = Object.getOwnPropertyDescriptor(o, 'baz');
+
+        Object.getOwnPropertyDescriptor("foo",0);
+
+        Object.getOwnPropertyDescriptor("foo",0);
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

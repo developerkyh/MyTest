@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+
+/*
+            var product = {
+                aaa:1111,
+                bbb:222,
+                ccc:333
+            };
+            alert(product.aaa);
+*/
+/*
+            var obj = {
+                    aaa : 123,
+                    bbb : 'RintIanTta',
+                    ccc : true,
+                    ddd : [10, 20, 30, 40, 50],
+                    eee : function(food){
+                        alert('나는'+ food +'이다. 숫자는'+this.aaa+'이다');
+                    }
+            };
+            obj.eee(987);
+*/
+/*            var pdt={
+                name: 'javascrit and programing!!',
+                price: '10000원',
+                language: '한국어',
+                supportOS:'window8 32/64',
+                subscription: true
+            };
+            var output = '';
+            for(var key in pdt){
+                output += '' + key + ':' +pdt[key] +'\n';
+            }
+            alert(output);
+*/
+/*
+            var student = {
+                name : '김용한',
+                age: 40,
+                aaa: 93,
+                bbb:87,
+                ccc:45
+            };
+            var output ='';
+            output += " 'name' in student: " + ('zz' in student) + '\n';
+            alert(output);
+*/
+/*
+            var output = 0;
+            var student = {
+                a1: 10,
+                a2: 10,
+                a3: 10,
+                a4: 10
+            }
+                for(var key in student) {
+                    output += student[key];
+            }
+            alert(output);
+*/
+
+/*
+            var student = {};
+                student.aaa= '김용한',
+                student.bbb=123,
+                student.ccc='프로그램',
+                student.ddd=true
+
+            student.toString = function(){
+                var output = '';
+                for(var key in this){
+                    if(key != 'toString') output += key + '\t' + this[key] + '\n';
+                }
+                return output;
+            }
+            alert(student.toString());
+            delete(student.bbb);
+            delete(student.ddd);
+            alert(student);
+*/
+
+/*
+
+            var students = [];
+            students.push({ 이름: '윤인성', 국어: 87, 수학 :98, 영어: 88, 과학: 95});
+            students.push({ 이름: '연하진', 국어: 92, 수학 :94, 영어: 79, 과학: 89});
+            students.push({ 이름: '구지연', 국어: 88, 수학: 92, 영어: 96, 과학: 94});
+            students.push({ 이름: '나선주', 국어: 91, 수학: 89, 영어: 43, 과학: 66});
+            students.push({ 이름: '윤아린', 국어: 87, 수학: 68, 영어: 48, 과학: 85});
+            for(var i in students){
+                students[i].getSum = function() {
+                    return this.국어 + this.수학 + this.영어 + this.과학;
+                };
+                students[i].getAverage = function(){
+                    return this.getSum() / 4;
+                };
+*/
+/*
+                students[i].getOutStudent = function(){
+                    return this.이름 +'\t'+ this.국어 +'\t'+ this.수학 +'\t'+ this.영어 +'\t'+ this.과학;
+                }
+*//*
+
+            }
+            var output = '이름\t총점\t평균\n';
+            var getOutStudents = '';
+            for(var i in students){
+                with(students[i]){
+                    output += 이름 + '\t' + getSum() + '\t' + getAverage() + '\n';
+                    getOutStudents += students[i].toString() + '\n';
+                }
+            }
+
+            alert(output);
+            alert(getOutStudents);
+
+*/
+/*
+
+            function makeStudent(name, korean, math, english, science){
+                var willReturn = {
+                    이름: name,
+                    국어: korean,
+                    수학: math,
+                    영어: english,
+                    과학: science,
+
+                    getSum: function(){
+                        return this.국어 + this.수학 + this.영어 + this.과학;
+                    },
+                    getAverage: function(){
+                        return this.getSum() / 4;
+                    },
+                    toString: function(){
+                        return this.이름 + '\t' + this.getSum() + '\t' + this.getAverage();
+                    }
+                };
+                return willReturn;
+            }
+            var students = [];
+            students.push(makeStudent('김용한', 100, 100, 100, 100));
+            students.push(makeStudent('원지연', 99, 99, 99, 99));
+            students.push(makeStudent('김현지', 98, 98, 98, 98));
+            students.push(makeStudent('김현주', 97, 97, 97, 97));
+            students.push(makeStudent('리노빌', 100, 100, 100, 100));
+            var output = '이름\t 총점\t 평균\n';
+            for(var i in students){
+                output += students[i].toString()+'\n';
+            }
+            alert(output);
+*/
+/*
+            function Student(name, korean, math, english, science){
+                this.name=name;
+                this.korean=korean;
+                this.math=math;
+                this.english=english;
+                this.science=science;
+
+                this.getSum = function(){
+                    return this.korean + this.math + this.english + this.science;
+                };
+                this.getAverage = function(){
+                    return this.getSum() / 4;
+                };
+                this.toString = function(){
+                    return this.name + '\t' + this.getSum() + '\t' + this.getAverage();
+                };
+            };
+                var students = [];
+                students.push(new Student('김용한', 100, 100, 100, 100));
+                students.push(new Student('원지연', 50, 50, 50, 50));
+                students.push(new Student('김현지', 99, 99, 99, 99));
+                students.push(new Student('김현주', 99, 99, 99, 99));
+                students.push(new Student('리노빌', 10, 10, 10, 10));
+
+                var output = '이름\t총점\t평균\n';
+                for(var i in students){
+                    output += students[i].toString() + '\n';
+                }
+                alert(output);
+*/
+/*            function Student(name, korean, math, english, science){
+                this.name = name;
+                this.korean = korean;
+                this.math = math;
+                this.english = english;
+                this.science = science;
+            };
+            Student.prototype.getSum = function(){
+                return this.korean + this.math + this.english + this.science;
+            };
+            Student.prototype.getAverage = function(){
+                return this.getSum() / 4;
+            };
+            Student.prototype.toString = function(){
+                return this.name + '\t' + this.getSum() + '\t' + this.getAverage();
+            };
+                var students = [];
+                students.push(new Student('김용한', 100, 100, 100, 100));
+                students.push(new Student('원지연', 50, 50, 50, 50));
+                students.push(new Student('김현지', 99, 99, 99, 99));
+                students.push(new Student('김현주', 99, 99, 99, 99));
+                students.push(new Student('리노빌', 10, 10, 10, 10));
+                var output = '이름\t총점\t평균\n';
+                for(var i in students) {
+                    output += students[i].toString() + '\n';
+                }
+            alert(output);
+*/
+/*
+        function Rectangle(width, height){
+            this.width = width;
+            this.height = height;
+        }
+        Rectangle.prototype.getArea = function(){
+            return this.width * this.height;
+        };
+        var Rectangle = new Rectangle(5,7);
+        alert('영역' + Rectangle.getArea());
+*/
+/*
+        function Rectangle(w, h){
+            var width=w;
+            var height=h;
+
+            this.getWidth = function (){return width; };
+            this.getHeight = function (){return height; };
+            this.setWidth = function (value){
+                if(value < 0){
+                    throw '길이는 음수일 수 없습니다.';
+                }else{
+                    width = value;
+                }
+            };
+            this.setHeight = function (value){
+                if (value < 0){
+                    throw '길이는 음수일 수 없습니다.';
+                }else{
+                    height = value;
+                }
+            };
+        }
+        Rectangle.prototype.getArea = function(){
+            return this.getWidth() * this.getHeight();
+        };
+        var rectangle = new Rectangle(5, 7);
+        rectangle.setWidth(-2);
+
+        alert('영역:' + rectangle.getArea());
+*/
+/*          function Rectangle(width, height){
+            var width=width;
+            var height=height;
+
+            this.getWidth=function(){return width; };
+            this.getHeight=function(){return height; };
+            this.setWidth=function(value){
+                if(value <0){
+                    throw '길이는 음수일 수 없습니다.'
+                }else{
+                    width= value;
+                }
+            };
+            this.setHeight=function(value){
+                if(value <0){
+                    throw '길이는 음수일 수 없습니다.'
+                }else{
+                    height=value;
+                }
+            };
+        }
+        Rectangle.prototype.getArea=function(){
+            return this.getWidth() * this.getHeight();
+        };*/
+/*
+        function Square(length){
+            this.base = Rectangle;
+            this.base(length, length);
+        }
+        Square.prototype = Rectangle.prototype;
+
+        var rectangle = new Rectangle(5,7);
+        var square = new Square(5);
+
+        alert(rectangle.getArea() + ':'+ square.getArea());
+*/
+/*        function Square(length){
+            Rectangle.call(this, length, length);
+        }
+        Square.prototype = new Rectangle();
+        Square.prototype.constructor = Square;
+
+        var square = new Square(5);
+        alert(square.getArea());
+*/
+/*        var object = {};
+        Object.defineProperty(object, 'name',  {
+            value: 'KIM YONG HAN',
+            writeable: false,
+            enumerable: false
+        });
+        object.name = 'OTHER';
+        for(var i in object){
+            alert(i + ' : ' + object[i]);
+        }
+        alert(object.name);
+*/
+/*
+        var obj = {};
+        var value = 'kim yong han';
+
+        Object.defineProperty(obj, 'name', {
+            get: function(){
+                alert('게터 보내줌'+ value);
+                return value;
+            },
+            set: function(newValue){
+                alert('세터 받아줌:' + newValue);
+                value = newValue;
+            }
+        });
+        obj.name = 'ALPHA'
+        alert(obj.name);
+*/
+/*
+        var object = {};
+        var value = 'KIM YONG HAN'
+        Object.definePropertiy(object, 'name', {
+            get: function(){return value; },
+            set: function(newValue){value = new Value;},
+            configurable: true
+        });
+        Object.defineProperty(object, 'name', {
+            enumerable: true
+        });
+*/
+/*        var object = {};
+        Object.defineProperties(object, {
+            name: {
+                value: 'KIM YONG HAN'
+            },
+            gender: {
+                value:'Male'
+            }
+        });
+        alert(object.name);
+        alert(object.gender);
+*/
+/*
+        var object = Object.create({}, {
+            name: { value: 'KIM YONG HAN', enumerable: true },
+            gender: { value: 'Male', enumerable:true}
+        });
+        var person = Object.create(object, {
+            region: {value: 'Seoul, korea', enumerable: true },
+            hobby: {value: 'Guitar', enumerable: true }
+        });
+        alert(Object.getOwnPropertyNames(person) + '\n' + Object.keys(person));
+        alert(person.name + ':' + person.gender);
+*/
+/*
+        var object = {};
+        object.gender = 'Male';
+        Object.defineProperty(object, 'name', {
+           value: 'Kim Yong Han',
+           writeable: false
+        });
+        alert(Object.isExtensible(object));
+        Object.preventExtensions(object);
+        alert(Object.isExtensible(object));
+        alert('꿈이 있나?:'+object.dream);
+
+        object.dream ='programer';
+
+        object.defineProperty(object, 'showMeTheMoney',{
+            value: true
+        });
+*/
+/*
+
+        var person = {
+            name: 'Kim yong han',
+            gender: 'Male',
+            region: 'Seoul, Korea',
+            hobby: 'Guitar'
+        };
+        Object.freeze(person);
+        delete person.name;
+        person.name = 'kkk';
+
+        alert(person.name);
+*/
+/*
+
+        var object = { name: 'kim yong han'};
+
+        Object.defineProperty(object, 'gender', {
+            value: 'Male',
+        });
+        alert(Object.keys(object));
+        alert(Object.getOwnPropertyNames(object));
+*/
+/*
+var object = { name: 'kim yong han' };
+        var value = 'Male';
+        Object.defineProperty(object, 'gender', {
+            get: function(){
+                //alert('getter:'+value);
+                return value;
+            },
+            set: function(newValue){
+                value= newValue;
+                alert('setter:'+value);
+            }
+        });
+        object.gender = 'Female';
+        alert(object.gender);
+        var descriptors = [];
+        descriptors.push(Object.getOwnPropertyDescriptor(object, 'name'));
+        descriptors.push(Object.getOwnPropertyDescriptor(object, 'gender'));
+
+        var output = '';
+        for(var i in descriptors){
+            var item = descriptors[i];
+            for(var key in item){
+                output += key + ':' + item[key] + '\n';
+            }
+            output += '----------------------------\n'
+        }
+        alert(output);
+*/
+        </script>
+    </head>
+    <body>
+        <div>
+            <h4>javascript test 6장 '!!~</h4>
+            <p>객체지향 프로그래밍</p>
+        </div>
+    </body>
+</html>

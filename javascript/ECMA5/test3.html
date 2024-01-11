@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script>
+      /*
+                  var primitiveNumber=273;
+                  var objectNumber =new Number(273);
+      
+                  var output = '';
+                  output += typeof(primitiveNumber)+':'+primitiveNumber + '\n';
+                  output += typeof(objectNumber) + ':'+objectNumber;
+                  alert(output);
+                  */
+      /*
+                  var primitiveNumber = 273;
+                  var objectNumber = new Number(273);
+      
+                  Number.prototype.method = function(){
+                      return '김용한';
+                  };
+                  var output ='';
+                  output += primitiveNumber.method() + '\n';
+                  output += objectNumber.method();
+                  alert(output);
+      */
+      /*
+                  var object = { property: 273 };
+      
+                  var output ='';
+                  output += "HOP('property'): " + object.hasOwnProperty('property')+ '\n';
+                  output += "HOP('constructor'): " + object.hasOwnProperty('constructor') +'\n';
+                  output += "PIE('property'):" + object.propertyIsEnumerable('property') + '\n';
+                  output += "PIE('constructor'):" + object.propertyIsEnumerable('constructor');
+                  alert(output);
+      
+                  for(var key in object){
+                      alert(object[key]);
+                  }
+      */
+      /*            var student = {
+                      name: '윤명월',
+                      grade: '대학교 1학년',
+                      toString: function(){
+                          return this.name + ' : ' + this.grade;
+                      }
+                  };
+                  alert(student);
+      */
+      /*
+      
+                  var numberFromLiteral = 273;
+                  var numberFromObject = new Number(273);
+      
+                  var output = '';
+                  output += '1.' + typeof(numberFromLiteral) + '\n';
+                  output += '2.' + typeof(numberFromObject);
+                  alert(output);
+      
+      */
+      /*
+                  var numberFromLiteral = 273;
+                  var numberFromObject = new Number(273);
+      
+                  if(numberFromLiteral.constructor == Number){
+                      alert('numberFromLiteral 은 숫자입니다.');
+                  }
+                  if(numberFromObject.constructor == Number){
+                      alert('numberFromObject 은 숫자입니다.');
+                  }
+      */
+      
+      /*
+                  var  numberFromLiteral = 273;
+                  var numberFromConstructor = new Number(273);
+      
+                  alert(typeof(numberFromLiteral));
+                  alert(typeof(numberFromConstructor));
+      */
+      var number = 2.123456789;
+      var output = '';
+      output += number.toFixed(1) + '\n';
+      output += number.toFixed(4);
+      alert(output);
+  
+  </script>
+</head>
+<body>
+<div>
+  <h4>javascript test 7장 '!!</h4>
+  <p>기본 내장 객체</p>
+</div>
+</body>
+</html>

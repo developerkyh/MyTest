@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .tab_basic { width: 80%; margin: auto; }
+    .tab_list_wrap { font-size: 0; height: 35px; }
+    .tab_list { display: inline-block; width: 33.3334%; height: 100%; font-size: 15px; line-height: 30px; text-align: center; border: 1px solid #eee; border-right: 0; box-sizing: border-box; }
+    .tab_list:last-child { border-right: 1px solid #eee; }
+    .tab_list.tab_active { background: #eee; }
+    .tab_list a { display: block; width: 100%; height: 100%; text-decoration: none; color: #222; }
+    .tab_content { display: none; width: 100%; min-height: 100px; padding: 20px; background: #eee; box-sizing: border-box; }
+    .tab_content:first-child { display: block; }
+  </style>
+</head>
+<body>
+
+  <div class="tab_basic">
+    <div class="tab_list_wrap">
+    <div class="tab_list tab_active" data-tabnum="0">
+    <a href="#">1번 탭</a>
+    </div>
+    <div class="tab_list" data-tabnum="1">
+    <a href="#">2번 탭</a>
+    </div>
+    <div class="tab_list" data-tabnum="2">
+    <a href="#">3번 탭</a>
+    </div>
+    </div>
+    <div class="tab_container">
+    <div class="tab_content">
+    Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+    </div>
+    <div class="tab_content">
+    Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR.
+    </div>
+    <div class="tab_content">
+    Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+    </div>
+    </div>
+    </div>
+  
+  <script>
+    var tabList = document.querySelectorAll('.tab_list_wrap .tab_list')
+    Array.prototype.forEach.call(tabList, function(list) {
+      list.children[0].addEventListener('click', function(e) {
+        e.preventDefault()
+        var tabContent = document.querySelectorAll('.tab_container .tab_content')
+        var tabNum = this.parentElement.getAttribute('data-tabnum')
+        Array.prototype.forEach.call(tabContent, function(cont, i) {
+          cont.style.display = 'none'
+          tabList[i].className = 'tab_list'
+        })
+        tabContent[tabNum].style.display = 'block'
+        if(list.className.indexOf('tab_active') == -1) {
+          list.className = 'tab_list tab_active'
+        }
+      })
+    })
+  </script>
+</body>
+</html>
+

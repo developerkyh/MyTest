@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .tab-area {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    .tab-area .tab.active {
+      text-decoration: none;
+      color: brown !important
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="tab-area">
+    <a href="#" role="tab" class="tab">탭1</a>
+    <a href="#" role="tab" class="tab">탭2</a>
+    <a href="#" role="tab" class="tab">탭3</a>
+  </div>
+
+  <script>
+    // 실행 전
+    /* 
+    function logMessage() {
+      return 'worked';
+    }
+
+    var sumNumbers = function () {
+      return 10 + 20;
+    };
+
+    sumNumbers();
+    logMessage();
+
+    console.log(logMessage());
+    console.log(sumNumbers());
+
+
+    function tabsHandler(index) {
+        return function tabClickEvent(event) {
+            console.log(index);
+        }
+    }
+
+    var tabs = document.querySelectorAll('.tab');
+    var i;
+
+    for (i=0; i<tabs.length; i+= 1) {
+        tabs[i].onclick=tabsHandler(i);
+    }
+     */
+
+    let tabs = document.querySelectorAll('.tab');
+
+
+    for (let i = 0; i < tabs.length; i += 1) {
+      tabs[i].onclick = function (event) {
+        console.log(i);
+      };
+    }
+  </script>
+</body>
+</html>

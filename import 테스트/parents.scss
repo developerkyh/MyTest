@@ -1,0 +1,6 @@
+@use "children";
+
+
+.box-type-1 {
+    @include children.rounded;
+}

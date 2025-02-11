@@ -1,5 +1,11 @@
-@import "base";
+@charset "utf-8";
+
+@use 'sass:list';
+
 @import "variable";
+@import "base";
+@import "etc";
+
 
 .wrap {
     height: 100%;
@@ -23,7 +29,7 @@ section {
 
     .section {
         width: 100%;
-        height: 1000px;
+        min-height: 500px;
         border-bottom: 1px solid #CCC;
 
         .section-head {
@@ -39,16 +45,29 @@ section {
 
         .section-body {
             padding: 0 20px;
-
-            p {
-                column-count: 3;
-            }
-        }
-
-        @for $i from 1 through 4 {
-            &.b#{$i} {
-                background-color: nth($bgColor, $i);
-            }
         }
     }
+}
+
+@for $i from 1 through list.length($bgColor) {
+    .bg-#{$i} {
+        background-color: nth($bgColor, $i);
+    }
+}
+
+
+
+/* CSS Class */
+
+.column-count {
+    column-count: 3;
+    gap: 100px
+}
+
+.clip-path-circle {
+    clip-path: circle(40%);
+}
+
+.clip-path-ellipse {
+    clip-path: ellipse(130px 140px at 10% 20%);
 }

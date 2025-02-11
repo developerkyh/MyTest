@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.display-block {
+    display: block;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-flow: row wrap;
+}
+
+.flex-column {
+    flex-flow: column wrap;
+}
+
+@for $i from 1 through 10 {
+    .w-#{$i*10}p {
+        width: #{$i*10}+'%';
+    }
+}
+
+@for $i from 1 through 10 {
+    .h-#{$i*10}p {
+        height: #{$i*10}+'%';
+    }
+}
+
+@for $i from 1 through 10 {
+    .w-#{$i*10}px {
+        width: #{$i*10}+'px';
+    }
+}
+
+@for $i from 1 through 10 {
+    .h-#{$i*10}px {
+        height: #{$i*10}+'px';
+    }
+}

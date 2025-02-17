@@ -28,13 +28,13 @@
     }
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 30 {
     .w-#{$i*10}px {
         width: #{$i*10}+'px';
     }
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 30 {
     .h-#{$i*10}px {
         height: #{$i*10}+'px';
     }

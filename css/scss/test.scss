@@ -22,6 +22,7 @@ header {
     height: 80px;
     background-color: #FFF;
     text-align: center;
+    z-index: 1;
 }
 
 section {
@@ -45,6 +46,7 @@ section {
 
         .section-body {
             padding: 0 20px;
+            height: 100%;
         }
     }
 }
@@ -59,9 +61,12 @@ section {
 
 /* CSS Class */
 
-.column-count {
-    column-count: 3;
-    gap: 100px
+/* clip-path */
+@for $i from 1 through 3 {
+    .column-count-#{$i} {
+        column-count: #{$i};
+        gap: 100px
+    }
 }
 
 .clip-path-circle {
@@ -70,4 +75,84 @@ section {
 
 .clip-path-ellipse {
     clip-path: ellipse(130px 140px at 10% 20%);
+}
+
+.clip-path-polygon {
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.clip-path-path {
+    clip-path: path('M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z');
+}
+
+.clip-path-rect {
+    clip-path: rect(5px 5px 160px 145px round 20%);
+}
+
+.clip-path-xywh {
+    clip-path: xywh(0 5px 100% 75% round 15% 0);
+}
+
+
+/* accent-color */
+.accent-color {
+    input {
+        accent-color: auto;
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+    .purple {
+        accent-color: rebeccapurple;
+    }
+
+    .green {
+        accent-color: green;
+    }
+
+    .red {
+        accent-color: red;
+    }
+
+    .yellow {
+        accent-color: yellow
+    }
+
+    .black {
+        accent-color: black;
+    }
+}
+
+.backdrop-filter {
+
+    .container {
+        background-size: cover;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        background-image: url("https://a7d7860711ce4a6ff5de7d38b5d8ea3e987f5acb.mdnplay.dev/en-US/docs/Web/CSS/backdrop-filter/anemones.jpg");
+    }
+
+    .box {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .blur {
+        background-color: rgb(255 255 255 / 30%);
+        backdrop-filter: blur(2px);
+    }
+
+    .invert {
+        background-color: rgb(255 255 255 / 30%);
+        backdrop-filter: invert(80%);
+    }
+
+    .sepia {
+        background-color: rgb(255 255 255 / 30%);
+        backdrop-filter: sepia(90%);
+    }
 }

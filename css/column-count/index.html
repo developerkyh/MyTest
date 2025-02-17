@@ -11,19 +11,54 @@
 <body>
     <div class="wrap">
         <header>
-            <a href="#test1">column-count</a>
-            <a href="#test2">clip-path</a>
-            <a href="#test3">test3</a>
-            <a href="#test4">test4</a>
+            <a href="#test1">accent-color</a>
+            <a href="#test2">backdrop-filter</a>
+            <a href="#test3">column-count</a>
+            <a href="#test4">clip-path</a>
         </header>
 
         <section>
             <div class="section bg-1" id="test1">
                 <div class="section-head">
+                    <h1>accent-color</h1>
+                </div>
+                <div class="section-body">
+                    <div class="accent-color column-count-3">
+                        <input type="checkbox" checked />
+                        <input type="checkbox" class="green" checked />
+                        <input type="checkbox" class="red" checked />
+                        <input type="checkbox" class="yellow" checked />
+                        <input type="checkbox" class="purple" checked />
+                        <input type="checkbox" class="black" checked />
+                    </div>
+                </div>
+            </div>
+            <div class="section bg-2" id="test2">
+                <div class="section-head">
+                    <h1>backdrop-filter</h1>
+                </div>
+                <div class="section-body">
+                    <div class="backdrop-filter h-300px">
+                        <div class="container column-count-3">
+                            <div class="box blur">
+                                <p>backdrop-filter: blur(10px)</p>
+                            </div>
+                            <div class="box invert">
+                                <p>backdrop-filter: invert(80%)</p>
+                            </div>
+                            <div class="box sepia">
+                                <p>backdrop-filter: sepia(90%)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section bg-3" id="test3">
+                <div class="section-head">
                     <h1>column-count</h1>
                 </div>
                 <div class="section-body">
-                    <div class="column-count">
+                    <div class="column-count-3">
                         요소의 내용이 흐를 이상적인 열 수를 설명하는 엄격히 양의입니다.
                         column-width도 auto가 아닌 값으로 설정된 경우 허용되는 최대 열 수를 나타낼 뿐입니다.
                         요소의 내용이 흐를 이상적인 열 수를 설명하는 엄격히 양의입니다.
@@ -61,17 +96,24 @@
                     </div>
                 </div>
             </div>
-            <div class="section bg-2" id="test2">
+            <div class="section bg-4" id="test4">
                 <div class="section-head">
                     <h1>clip-path</h1>
                 </div>
                 <div class="section-body">
-                    <div class="clip-path-circle bg-8 w-80px h-80px"></div>
-                    <div class="clip-path-ellipse bg-8 w-80px h-80px"></div>
+                    <div class="column-count-3 h-100px">
+                        <div class="clip-path-circle bg-8 w-80px h-80px"></div>
+                        <div class="clip-path-ellipse bg-8 w-80px h-80px"></div>
+                        <div class="clip-path-polygon bg-8 w-80px h-80px"></div>
+                    </div>
+                    <div class="column-count-3 h-100px">
+                        <div class="clip-path-path bg-8 w-80px h-80px"></div>
+                        <div class="clip-path-rect bg-8 w-80px h-80px"></div>
+                        <div class="clip-path-xywh bg-8 w-80px h-80px"></div>
+                    </div>
                 </div>
             </div>
-            <div class="section bg-3" id="test3">333333</div>
-            <div class="section bg-4" id="test4">444444</div>
+
         </section>
     </div>
 </body>

@@ -259,6 +259,86 @@ button:focus {
   width: 100px;
 }
 
+.w-110px {
+  width: 110px;
+}
+
+.w-120px {
+  width: 120px;
+}
+
+.w-130px {
+  width: 130px;
+}
+
+.w-140px {
+  width: 140px;
+}
+
+.w-150px {
+  width: 150px;
+}
+
+.w-160px {
+  width: 160px;
+}
+
+.w-170px {
+  width: 170px;
+}
+
+.w-180px {
+  width: 180px;
+}
+
+.w-190px {
+  width: 190px;
+}
+
+.w-200px {
+  width: 200px;
+}
+
+.w-210px {
+  width: 210px;
+}
+
+.w-220px {
+  width: 220px;
+}
+
+.w-230px {
+  width: 230px;
+}
+
+.w-240px {
+  width: 240px;
+}
+
+.w-250px {
+  width: 250px;
+}
+
+.w-260px {
+  width: 260px;
+}
+
+.w-270px {
+  width: 270px;
+}
+
+.w-280px {
+  width: 280px;
+}
+
+.w-290px {
+  width: 290px;
+}
+
+.w-300px {
+  width: 300px;
+}
+
 .h-10px {
   height: 10px;
 }
@@ -299,6 +379,86 @@ button:focus {
   height: 100px;
 }
 
+.h-110px {
+  height: 110px;
+}
+
+.h-120px {
+  height: 120px;
+}
+
+.h-130px {
+  height: 130px;
+}
+
+.h-140px {
+  height: 140px;
+}
+
+.h-150px {
+  height: 150px;
+}
+
+.h-160px {
+  height: 160px;
+}
+
+.h-170px {
+  height: 170px;
+}
+
+.h-180px {
+  height: 180px;
+}
+
+.h-190px {
+  height: 190px;
+}
+
+.h-200px {
+  height: 200px;
+}
+
+.h-210px {
+  height: 210px;
+}
+
+.h-220px {
+  height: 220px;
+}
+
+.h-230px {
+  height: 230px;
+}
+
+.h-240px {
+  height: 240px;
+}
+
+.h-250px {
+  height: 250px;
+}
+
+.h-260px {
+  height: 260px;
+}
+
+.h-270px {
+  height: 270px;
+}
+
+.h-280px {
+  height: 280px;
+}
+
+.h-290px {
+  height: 290px;
+}
+
+.h-300px {
+  height: 300px;
+}
+
 .wrap {
   height: 100%;
 }
@@ -323,6 +483,7 @@ header {
   height: 80px;
   background-color: #FFF;
   text-align: center;
+  z-index: 1;
 }
 
 section {
@@ -344,6 +505,7 @@ section .section .section-head h1 {
 }
 section .section .section-body {
   padding: 0 20px;
+  height: 100%;
 }
 
 .bg-1 {
@@ -379,7 +541,22 @@ section .section .section-body {
 }
 
 /* CSS Class */
-.column-count {
+/* clip-path */
+.column-count-1 {
+  -webkit-column-count: 1;
+     -moz-column-count: 1;
+          column-count: 1;
+  gap: 100px;
+}
+
+.column-count-2 {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  gap: 100px;
+}
+
+.column-count-3 {
   -webkit-column-count: 3;
      -moz-column-count: 3;
           column-count: 3;
@@ -394,4 +571,82 @@ section .section .section-body {
 .clip-path-ellipse {
   -webkit-clip-path: ellipse(130px 140px at 10% 20%);
           clip-path: ellipse(130px 140px at 10% 20%);
+}
+
+.clip-path-polygon {
+  -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+          clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.clip-path-path {
+  -webkit-clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
+          clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
+}
+
+.clip-path-rect {
+  -webkit-clip-path: rect(5px 5px 160px 145px round 20%);
+          clip-path: rect(5px 5px 160px 145px round 20%);
+}
+
+.clip-path-xywh {
+  -webkit-clip-path: xywh(0 5px 100% 75% round 15% 0);
+          clip-path: xywh(0 5px 100% 75% round 15% 0);
+}
+
+/* accent-color */
+.accent-color input {
+  accent-color: auto;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.accent-color .purple {
+  accent-color: rebeccapurple;
+}
+.accent-color .green {
+  accent-color: green;
+}
+.accent-color .red {
+  accent-color: red;
+}
+.accent-color .yellow {
+  accent-color: yellow;
+}
+.accent-color .black {
+  accent-color: black;
+}
+
+.backdrop-filter .container {
+  background-size: cover;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://a7d7860711ce4a6ff5de7d38b5d8ea3e987f5acb.mdnplay.dev/en-US/docs/Web/CSS/backdrop-filter/anemones.jpg");
+}
+.backdrop-filter .box {
+  padding: 20px;
+  border-radius: 10px;
+}
+.backdrop-filter .blur {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+.backdrop-filter .invert {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: invert(80%);
+          backdrop-filter: invert(80%);
+}
+.backdrop-filter .sepia {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: sepia(90%);
+          backdrop-filter: sepia(90%);
 }
